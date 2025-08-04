@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   HiTrophy, 
@@ -31,11 +32,11 @@ interface MobileMenuProps {
 }
 
 const LogoIcon: React.FC = () => (
-  <img
+        <Image
     src="/logowse.png"
     alt="Wall Street English Logo"
-    width="120"
-    height="80"
+    width={120}
+    height={80}
     className="h-16 w-auto"
   />
 );
@@ -229,7 +230,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, navItems }) => (
           </motion.a>
         );
       })}
-    </div>
+        </div>
     <div className="pt-4 pb-4 border-t border-gray-700">
       <div className="px-5">
         <Button variant="outline" className="w-full" href="#enquiry">
@@ -613,7 +614,7 @@ export default function Home() {
                 </p>
               </motion.div>
             ))}
-          </div>
+        </div>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -622,7 +623,7 @@ export default function Home() {
             className="max-w-4xl mx-auto text-center"
           >
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              By joining our franchise network, you'll leverage a globally
+              By joining our franchise network, you&apos;ll leverage a globally
               recognised brand, proven systems, and an experienced support team
               committed to helping you succeed in the growing Saudi market.
             </p>
@@ -647,10 +648,11 @@ export default function Home() {
                 {/* Video Thumbnail */}
                 <div className="relative aspect-video bg-gradient-to-br from-primary to-secondary">
                   {/* Custom Video Thumbnail */}
-                  <img
+                  <Image
                     src="/videothumbnail.png"
                     alt="Wall Street English Franchise Video"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   
                   {/* Dark Overlay */}
@@ -705,7 +707,7 @@ export default function Home() {
                       />
                     </svg>
                   </motion.div>
-                </div>
+    </div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -754,7 +756,7 @@ export default function Home() {
                 className="text-lg text-gray-700 mb-6 leading-relaxed"
               >
                 English is the language of global business, trade, and opportunity.
-                With Saudi Arabia's Vision 2030 driving economic growth, tourism,
+                With Saudi Arabia&apos;s Vision 2030 driving economic growth, tourism,
                 and global engagement, demand for high-quality English training has
                 never been higher.
               </motion.p>
@@ -844,7 +846,7 @@ export default function Home() {
                       />
                     </motion.div>
                   ))}
-                </div>
+    </div>
               </motion.div>
             </motion.div>
           </div>
@@ -1259,7 +1261,7 @@ export default function Home() {
             <div className="animate-slide-in-right">
               <div className="bg-white p-8 rounded-2xl card-shadow">
                 <h3 className="text-2xl font-bold text-primary mb-6 text-center">
-                  You'll Never Be Alone
+                  You&apos;ll Never Be Alone
                 </h3>
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-primary to-secondary rounded-full">
@@ -1268,8 +1270,8 @@ export default function Home() {
                 </div>
                 <p className="text-gray-600 text-center text-lg leading-relaxed">
                   Our dedicated team is here to guide you every step of the way,
-                  ensuring your success from launch through expansion. You're not
-                  just buying a franchise – you're joining a family.
+                  ensuring your success from launch through expansion. You&apos;re not
+                  just buying a franchise – you&apos;re joining a family.
                 </p>
                 <div className="mt-8 text-center">
                   <div className="inline-flex items-center space-x-4">
@@ -1409,9 +1411,9 @@ export default function Home() {
                   <i className="fas fa-quote-left text-white text-xl" />
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed mb-6 italic">
-                  "Joining Wall Street English has been the best business decision
-                  I've made. The brand, the systems, and the support made my launch
-                  smooth and my centre profitable within months."
+                  &quot;Joining Wall Street English has been the best business decision
+                  I&apos;ve made. The brand, the systems, and the support made my launch
+                  smooth and my centre profitable within months.&quot;
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-4">
