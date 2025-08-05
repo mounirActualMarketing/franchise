@@ -1391,10 +1391,10 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-left">
                   <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
                     <div className="bg-gradient-to-r from-primary to-secondary p-4 sm:p-6 rounded-xl card-shadow text-white ml-12 md:ml-0">
-                      <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3 text-primary">
                         5. Launch &amp; Change Lives
                       </h3>
-                      <p className="text-sm sm:text-base text-gray-100">
+                      <p className="text-sm sm:text-base text-gray-600">
                         Open your Wall Street English centre and start transforming
                         lives in your community.
                       </p>
