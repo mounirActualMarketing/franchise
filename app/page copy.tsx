@@ -379,7 +379,7 @@ const Hero: React.FC = () => (
         transition={{ delay: 0.4, duration: 0.8 }}
         className="mt-8 text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight text-white leading-tight"
       >
-        Join the World's Leading{" "}
+        Own a World-Class{" "}
         <motion.span 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -388,7 +388,7 @@ const Hero: React.FC = () => (
         >
           English Language
         </motion.span>{" "}
-        School Franchise
+        Training Business
       </motion.h1>
       <motion.p 
         initial={{ opacity: 0, y: 20 }}
@@ -396,7 +396,8 @@ const Hero: React.FC = () => (
         transition={{ delay: 0.6 }}
         className="mt-8 max-w-4xl mx-auto text-lg sm:text-xl text-gray-200 leading-relaxed"
       >
-        Tap into a $1.5B English training market in Saudi Arabia, growing 8%+ annually. Join{" "}
+        Partner with Wall Street English – the world&apos;s leading English
+        training brand with{" "}
         <motion.span 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -405,7 +406,7 @@ const Hero: React.FC = () => (
         >
           31 thriving centres
         </motion.span>{" "}
-        already operating across the Kingdom and leverage our 50 years of global success.
+        across the Kingdom.
       </motion.p>
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -415,7 +416,7 @@ const Hero: React.FC = () => (
       >
         <Button variant="primary" className="w-full sm:w-auto text-lg px-8 py-4" href="#enquiry">
           <i className="fas fa-rocket mr-3" />
-          Start Your Franchise Journey
+          Apply for a Franchise Today
         </Button>
         <Button variant="outline" className="w-full sm:w-auto text-lg px-8 py-4" href="#opportunity">
           Learn More <i className="fas fa-arrow-down ml-3" />
@@ -571,7 +572,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              The #1 English Training Brand in Saudi Arabia
+              Why Partner With Us
             </h2>
             <motion.div 
               initial={{ width: 0 }}
@@ -583,9 +584,9 @@ export default function Home() {
           </motion.div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              { count: "31", title: "Profitable Centres", desc: "Thriving centres across KSA generating strong returns", delay: 0 },
-              { count: "30+", title: "Years in Saudi", desc: "Established market presence and local expertise", delay: 0.2 },
-              { count: "35+", title: "Global Countries", desc: "Proven international success across diverse markets", delay: 0.4 }
+              { count: "50+", title: "Years of Excellence", desc: "Transforming lives through English language education worldwide", delay: 0 },
+              { count: "30+", title: "Global Countries", desc: "Proven success across diverse international markets", delay: 0.2 },
+              { count: "31", title: "KSA Centres", desc: "Established presence trusted by thousands of students", delay: 0.4 }
             ].map((item, index) => (
               <motion.div 
                 key={index}
@@ -622,7 +623,9 @@ export default function Home() {
             className="max-w-4xl mx-auto text-center"
           >
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              With over 3 million students trained worldwide and 350,000+ in Saudi Arabia, Wall Street English is the leading English language training brand in the Kingdom. Whether you open one centre or build a multi-centre empire, we give you the brand, tools, and support to succeed with a proven business model delivering ROI in 2–3 years.
+              By joining our franchise network, you&apos;ll leverage a globally
+              recognised brand, proven systems, and an experienced support team
+              committed to helping you succeed in the growing Saudi market.
             </p>
             
             {/* Video Section */}
@@ -734,7 +737,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-primary mb-8"
               >
-                A Growing Market –{" "}
+                The Opportunity in{" "}
                 <motion.span 
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -742,7 +745,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="text-secondary"
                 >
-                  Unlimited Potential
+                  Saudi Arabia
                 </motion.span>
               </motion.h2>
               <motion.p 
@@ -752,13 +755,16 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-lg text-gray-700 mb-6 leading-relaxed"
               >
-                The English training market in Saudi Arabia is booming — driven by Vision 2030's push for global competitiveness. With Wall Street English, you gain instant brand recognition, proven operational systems, and a competitive edge in a high-growth sector.
+                English is the language of global business, trade, and opportunity.
+                With Saudi Arabia&apos;s Vision 2030 driving economic growth, tourism,
+                and global engagement, demand for high-quality English training has
+                never been higher.
               </motion.p>
               <div className="space-y-6">
                 {[
-                  { icon: "fas fa-dollar-sign", title: "Market Value: $1.5B+", desc: "Massive market opportunity with substantial revenue potential", delay: 0.4 },
-                  { icon: "fas fa-chart-line", title: "Annual Growth: 8%+", desc: "Consistently growing market driven by Vision 2030 initiatives", delay: 0.6 },
-                  { icon: "fas fa-users", title: "High Demand", desc: "Millions of Saudis seek English training for work, study, and global careers", delay: 0.8 }
+                  { icon: "fas fa-building", title: "Corporate Demand", desc: "Companies are investing heavily in English training to improve workforce capabilities.", delay: 0.4 },
+                  { icon: "fas fa-users", title: "Consumer Demand", desc: "Students, professionals, and job seekers are seeking English skills to access better opportunities.", delay: 0.6 },
+                  { icon: "fas fa-chart-line", title: "Proven Business Model", desc: "We have the expertise, reputation, and infrastructure to help you capitalise on this demand.", delay: 0.8 }
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
@@ -872,7 +878,7 @@ export default function Home() {
               Key Benefits
             </motion.span>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Your Advantage with <span className="text-secondary">Wall Street English</span>
+              Key Benefits for <span className="text-secondary">Franchisees</span>
             </h2>
             <motion.div 
               initial={{ width: 0 }}
@@ -914,9 +920,9 @@ export default function Home() {
                     <HiTrophy className="h-10 w-10 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Proven ROI</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Established Brand</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      Payback in 2–3 years with established revenue streams
+                      Strong brand presence with proven market recognition
                     </p>
                   </div>
                 </div>
@@ -962,9 +968,9 @@ export default function Home() {
                     <HiLifebuoy className="h-10 w-10 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Comprehensive Support</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Ongoing Support</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      Training, operations, marketing, and recruitment assistance
+                      Comprehensive operational and marketing assistance
                     </p>
                   </div>
                 </div>
@@ -1010,9 +1016,9 @@ export default function Home() {
                     <HiChartBarSquare className="h-10 w-10 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Scalable Model</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">High Demand</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      Multi-centre expansion potential with proven systems
+                      Growing market with continuous expansion potential
                     </p>
                   </div>
                 </div>
@@ -1059,9 +1065,9 @@ export default function Home() {
                     <HiComputerDesktop className="h-10 w-10 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Global Expertise</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Digital Solutions</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      50 years of refining our proven learning system
+                      Cutting-edge technology and learning platforms
                     </p>
                   </div>
                 </div>
@@ -1107,9 +1113,9 @@ export default function Home() {
                     <HiArrowsPointingOut className="h-10 w-10 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Digital Solutions</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Flexible Model</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      Cutting-edge digital learning solutions and platforms
+                      Scalable business with expansion opportunities
                     </p>
                   </div>
                 </div>
@@ -1155,9 +1161,9 @@ export default function Home() {
                     <HiAcademicCap className="h-10 w-10 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Trusted Brand</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-3 tracking-tight">Expert Training</h3>
                     <p className="text-gray-600 leading-relaxed font-light text-sm">
-                      Recognised by millions worldwide with proven track record
+                      Professional development and curriculum support
                     </p>
                   </div>
                 </div>
@@ -1183,11 +1189,12 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              We Set You Up for Success
+              How We Support You
             </h2>
             <div className="w-24 h-1 bg-secondary mx-auto mb-8" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our franchise partners receive comprehensive support to ensure your success from day one and beyond.
+              We provide end-to-end support to ensure your success from day one and
+              beyond.
             </p>
           </div>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -1199,10 +1206,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-3">
-                      Full Operational Training
+                      Pre-launch Planning
                     </h3>
                     <p className="text-gray-600">
-                      Complete training for you and your team covering all aspects of centre operations.
+                      Site selection, market analysis, and comprehensive business
+                      planning support.
                     </p>
                   </div>
                 </div>
@@ -1212,10 +1220,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-3">
-                      Ongoing Marketing Campaigns
+                      Full Training Program
                     </h3>
                     <p className="text-gray-600">
-                      Tailored marketing campaigns and strategies designed for your local market.
+                      Complete training for you and your team – from sales
+                      techniques to daily operations.
                     </p>
                   </div>
                 </div>
@@ -1225,10 +1234,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-3">
-                      Student Acquisition Strategies
+                      Marketing &amp; Lead Generation
                     </h3>
                     <p className="text-gray-600">
-                      Proven student acquisition strategies and lead generation systems.
+                      Tailored marketing campaigns and lead generation strategies
+                      for your territory.
                     </p>
                   </div>
                 </div>
@@ -1238,23 +1248,11 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-primary mb-3">
-                      Digital Learning Platforms
+                      Ongoing Guidance
                     </h3>
                     <p className="text-gray-600">
-                      Integrated digital learning platforms combined with classroom learning for optimal results.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    5
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-primary mb-3">
-                      Dedicated Success Manager
-                    </h3>
-                    <p className="text-gray-600">
-                      Your dedicated franchise success manager for continued growth and support.
+                      Continuous operational guidance and regular performance
+                      reviews for sustained growth.
                     </p>
                   </div>
                 </div>
@@ -1495,86 +1493,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
-      {/* Impact Numbers */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="py-20 bg-gradient-to-r from-primary to-secondary"
-      >
-        <div className="container mx-auto px-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Join a Global Success Story
-            </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Be part of a proven franchise network with an unmatched track record
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "3M+", label: "Students Trained", delay: 0.1 },
-              { number: "35+", label: "Countries", delay: 0.2 },
-              { number: "31", label: "Centres in KSA", delay: 0.3 },
-              { number: "50", label: "Years of Success", delay: 0.4 }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30, scale: 0.8 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.6, delay: stat.delay }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: stat.delay + 0.3, duration: 0.5, type: "spring" }}
-                  viewport={{ once: true }}
-                  className="text-4xl md:text-6xl font-bold text-white mb-2"
-                >
-                  {stat.number}
-                </motion.div>
-                <p className="text-gray-200 font-medium text-sm md:text-base">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-          
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <p className="text-lg text-gray-200 mb-6">
-              📩 Franchising@wse.edu.sa
-            </p>
-            <motion.a 
-              href="#enquiry"
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
-            >
-              <i className="fas fa-rocket mr-3" />
-              Secure Your Territory Now
-            </motion.a>
-          </motion.div>
-        </div>
-      </motion.section>
-      
       {/* Enquiry Form */}
       <motion.section 
         id="enquiry" 
@@ -1600,7 +1518,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-white mb-6"
               >
-                Let's Start Your Franchise Journey
+                Start Your Franchise Journey Today
               </motion.h2>
               <motion.div 
                 initial={{ width: 0 }}
@@ -1616,7 +1534,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-xl text-gray-200"
               >
-                The demand for English language training in Saudi Arabia has never been higher. Secure your territory before it's taken.
+                Take the first step towards owning a successful English language
+                training business.
               </motion.p>
             </motion.div>
             <motion.div 
@@ -1696,7 +1615,7 @@ export default function Home() {
                     className="btn-primary text-lg px-12 py-4"
                   >
                     <i className="fas fa-paper-plane mr-3" />
-                    Enquire Now
+                    Submit Enquiry
                   </motion.button>
                   <motion.p 
                     initial={{ opacity: 0 }}
