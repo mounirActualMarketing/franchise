@@ -1499,7 +1499,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="py-20 bg-gradient-to-r from-primary to-secondary"
+        className="py-20 bg-white"
       >
         <div className="container mx-auto px-6">
           <motion.div 
@@ -1509,10 +1509,11 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Join a Global Success Story
             </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-secondary mx-auto mb-6" />
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Be part of a proven franchise network with an unmatched track record
             </p>
           </motion.div>
@@ -1531,18 +1532,18 @@ export default function Home() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ duration: 0.6, delay: stat.delay }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center bg-gray-50 p-6 rounded-xl card-shadow hover:shadow-lg transition-all duration-300"
               >
                 <motion.div 
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: stat.delay + 0.3, duration: 0.5, type: "spring" }}
                   viewport={{ once: true }}
-                  className="text-4xl md:text-6xl font-bold text-white mb-2"
+                  className="text-4xl md:text-6xl font-bold text-secondary mb-2"
                 >
                   {stat.number}
                 </motion.div>
-                <p className="text-gray-200 font-medium text-sm md:text-base">
+                <p className="text-gray-700 font-medium text-sm md:text-base">
                   {stat.label}
                 </p>
               </motion.div>
@@ -1556,18 +1557,23 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <p className="text-lg text-gray-200 mb-6">
-              📩 Franchising@wse.edu.sa
-            </p>
-            <motion.a 
-              href="#enquiry"
-              whileHover={{ scale: 1.05, y: -3 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
-            >
-              <i className="fas fa-rocket mr-3" />
-              Secure Your Territory Now
-            </motion.a>
+            <div className="bg-gray-50 p-8 rounded-2xl card-shadow max-w-2xl mx-auto">
+              <p className="text-lg text-gray-700 mb-6 flex items-center justify-center">
+                <span className="text-secondary mr-3 text-2xl">📩</span>
+                <a href="mailto:Franchising@wse.edu.sa" className="text-primary hover:text-secondary transition-colors duration-300 font-semibold">
+                  Franchising@wse.edu.sa
+                </a>
+              </p>
+              <motion.a 
+                href="#enquiry"
+                whileHover={{ scale: 1.05, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-red-600 transition-all duration-300 shadow-lg"
+              >
+                <i className="fas fa-rocket mr-3" />
+                Secure Your Territory Now
+              </motion.a>
+            </div>
           </motion.div>
         </div>
       </motion.section>
