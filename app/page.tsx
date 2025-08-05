@@ -1298,100 +1298,112 @@ export default function Home() {
       <section className="section-spacing bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 animate-slide-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
               Steps to Get Started
             </h2>
             <div className="w-24 h-1 bg-secondary mx-auto" />
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
-              {/* Timeline line */}
+              {/* Desktop Timeline line */}
               <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200 hidden md:block" />
-              <div className="space-y-12">
+              {/* Mobile Timeline line */}
+              <div className="absolute left-6 top-0 h-full w-1 bg-gray-200 md:hidden" />
+              
+              <div className="space-y-8 md:space-y-12">
+                {/* Step 1 */}
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-left">
-                  <div className="md:w-1/2 md:pr-8 mb-4 md:mb-0">
-                    <div className="bg-white p-6 rounded-xl card-shadow border-l-4 border-secondary">
-                      <h3 className="text-xl font-semibold text-primary mb-3">
+                  <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl card-shadow border-l-4 md:border-l-4 border-secondary ml-12 md:ml-0">
+                      <h3 className="text-lg sm:text-xl font-semibold text-primary mb-3">
                         1. Submit Your Enquiry
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-600">
                         Express your interest by filling out our comprehensive
                         enquiry form.
                       </p>
                     </div>
                   </div>
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="absolute left-2 md:relative md:left-0 flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
                     1
                   </div>
-                  <div className="md:w-1/2 md:pl-8" />
+                  <div className="hidden md:block md:w-1/2 md:pl-8" />
                 </div>
+
+                {/* Step 2 */}
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-right">
-                  <div className="md:w-1/2 md:pr-8" />
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="hidden md:block md:w-1/2 md:pr-8" />
+                  <div className="absolute left-2 md:relative md:left-0 flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
                     2
                   </div>
-                  <div className="md:w-1/2 md:pl-8 mt-4 md:mt-0">
-                    <div className="bg-white p-6 rounded-xl card-shadow border-r-4 border-secondary">
-                      <h3 className="text-xl font-semibold text-primary mb-3">
+                  <div className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl card-shadow border-l-4 md:border-l-0 md:border-r-4 border-secondary ml-12 md:ml-0">
+                      <h3 className="text-lg sm:text-xl font-semibold text-primary mb-3">
                         2. Attend Information Session
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-600">
                         Join our franchise information session to learn more about
                         the opportunity.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* Step 3 */}
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-left">
-                  <div className="md:w-1/2 md:pr-8 mb-4 md:mb-0">
-                    <div className="bg-white p-6 rounded-xl card-shadow border-l-4 border-secondary">
-                      <h3 className="text-xl font-semibold text-primary mb-3">
+                  <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl card-shadow border-l-4 md:border-l-4 border-secondary ml-12 md:ml-0">
+                      <h3 className="text-lg sm:text-xl font-semibold text-primary mb-3">
                         3. Review Investment Details
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-600">
                         Review investment requirements and discuss potential
                         territories with our team.
                       </p>
                     </div>
                   </div>
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="absolute left-2 md:relative md:left-0 flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
                     3
                   </div>
-                  <div className="md:w-1/2 md:pl-8" />
+                  <div className="hidden md:block md:w-1/2 md:pl-8" />
                 </div>
+
+                {/* Step 4 */}
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-right">
-                  <div className="md:w-1/2 md:pr-8" />
-                  <div className="flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
+                  <div className="hidden md:block md:w-1/2 md:pr-8" />
+                  <div className="absolute left-2 md:relative md:left-0 flex-shrink-0 w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold z-10">
                     4
                   </div>
-                  <div className="md:w-1/2 md:pl-8 mt-4 md:mt-0">
-                    <div className="bg-white p-6 rounded-xl card-shadow border-r-4 border-secondary">
-                      <h3 className="text-xl font-semibold text-primary mb-3">
+                  <div className="w-full md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                    <div className="bg-white p-4 sm:p-6 rounded-xl card-shadow border-l-4 md:border-l-0 md:border-r-4 border-secondary ml-12 md:ml-0">
+                      <h3 className="text-lg sm:text-xl font-semibold text-primary mb-3">
                         4. Sign Franchise Agreement
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-600">
                         Finalize your franchise agreement and prepare for your
                         successful launch.
                       </p>
                     </div>
                   </div>
                 </div>
+
+                {/* Step 5 */}
                 <div className="flex flex-col md:flex-row items-center animate-slide-in-left">
-                  <div className="md:w-1/2 md:pr-8 mb-4 md:mb-0">
-                    <div className="bg-gradient-to-r from-primary to-secondary p-6 rounded-xl card-shadow text-white">
-                      <h3 className="text-xl text-primary font-semibold mb-3">
+                  <div className="w-full md:w-1/2 md:pr-8 mb-4 md:mb-0">
+                    <div className="bg-gradient-to-r from-primary to-secondary p-4 sm:p-6 rounded-xl card-shadow text-white ml-12 md:ml-0">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-3">
                         5. Launch &amp; Change Lives
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-100">
                         Open your Wall Street English centre and start transforming
                         lives in your community.
                       </p>
                     </div>
                   </div>
-                  <div className="flex-shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white z-10">
+                  <div className="absolute left-2 md:relative md:left-0 flex-shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white z-10">
                     <i className="fas fa-star" />
                   </div>
-                  <div className="md:w-1/2 md:pl-8" />
+                  <div className="hidden md:block md:w-1/2 md:pl-8" />
                 </div>
               </div>
             </div>
@@ -1707,6 +1719,219 @@ export default function Home() {
           </motion.div>
     </div>
       </motion.section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-white">
+        <div className="container mx-auto px-6 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <Image
+                  src="/logowse.png"
+                  alt="Wall Street English Logo"
+                  width={80}
+                  height={53}
+                  className="h-12 w-auto"
+                />
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Transform your passion for education into a profitable business with Wall Street English franchise opportunities.
+              </p>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-facebook-f text-sm" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-twitter text-sm" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-linkedin-in text-sm" />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-instagram text-sm" />
+                </motion.a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+              <ul className="space-y-3">
+                <li>
+                  <motion.a
+                    href="#opportunity"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Franchise Opportunity
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#investment"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Investment Details
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#support"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Support & Training
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#enquiry"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Apply Now
+                  </motion.a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
+              <ul className="space-y-3">
+                <li>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    FAQ
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Documentation
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Training Resources
+                  </motion.a>
+                </li>
+                <li>
+                  <motion.a
+                    href="#"
+                    whileHover={{ x: 5 }}
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    Contact Support
+                  </motion.a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <i className="fas fa-map-marker-alt text-secondary mt-1 text-sm" />
+                  <div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Riyadh, Saudi Arabia<br />
+                      King Fahd Road
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-phone text-secondary text-sm" />
+                  <a
+                    href="tel:+966111234567"
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    +966 11 123 4567
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-envelope text-secondary text-sm" />
+                  <a
+                    href="mailto:franchise@wallstreetenglish.sa"
+                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
+                  >
+                    franchise@wallstreetenglish.sa
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <i className="fas fa-clock text-secondary text-sm" />
+                  <p className="text-gray-300 text-sm">
+                    Sun - Thu: 9:00 AM - 6:00 PM
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Footer */}
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <div className="text-center md:text-left">
+                <p className="text-gray-400 text-sm">
+                  © 2024 Wall Street English. All rights reserved.
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center md:justify-end space-x-6">
+                <motion.a
+                  href="#"
+                  whileHover={{ y: -2 }}
+                  className="text-gray-400 hover:text-secondary transition-colors duration-300 text-sm"
+                >
+                  Privacy Policy
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ y: -2 }}
+                  className="text-gray-400 hover:text-secondary transition-colors duration-300 text-sm"
+                >
+                  Terms of Service
+                </motion.a>
+                <motion.a
+                  href="#"
+                  whileHover={{ y: -2 }}
+                  className="text-gray-400 hover:text-secondary transition-colors duration-300 text-sm"
+                >
+                  Cookie Policy
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
