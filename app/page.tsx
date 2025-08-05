@@ -1597,7 +1597,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-4xl md:text-5xl font-bold text-white mb-6"
               >
-                Let's Start Your Franchise Journey
+                Let&apos;s Start Your Franchise Journey
               </motion.h2>
               <motion.div 
                 initial={{ width: 0 }}
