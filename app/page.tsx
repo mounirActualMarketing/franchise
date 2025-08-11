@@ -1,7 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
+// Declare HubSpot global type
+declare global {
+  interface Window {
+    hbspt: any;
+  }
+}
 import { 
   HiTrophy, 
   HiLifebuoy, 
@@ -525,6 +532,36 @@ const HeroSection: React.FC = () => {
 export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
+  useEffect(() => {
+    // Initialize HubSpot form when component mounts
+    const initHubSpotForm = () => {
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "2550768",
+          formId: "4aed259e-276e-4be6-b623-fddfccc0df14",
+          target: "#hubspot-form-4aed259e-276e-4be6-b623-fddfccc0df14",
+          region: "na1"
+        });
+      }
+    };
+
+    // Check if HubSpot script is already loaded
+    if (window.hbspt) {
+      initHubSpotForm();
+    } else {
+      // Wait for HubSpot script to load
+      const checkHubSpot = setInterval(() => {
+        if (window.hbspt) {
+          initHubSpotForm();
+          clearInterval(checkHubSpot);
+        }
+      }, 100);
+
+      // Clean up interval after 10 seconds
+      setTimeout(() => clearInterval(checkHubSpot), 10000);
+    }
+  }, []);
+
   return (
     <>
       <meta charSet="UTF-8" />
@@ -538,11 +575,18 @@ export default function Home() {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
       />
+      
+      {/* HubSpot Form Script */}
+      <script 
+        charSet="utf-8" 
+        type="text/javascript" 
+        src="//js.hsforms.net/forms/embed/v2.js"
+      ></script>
 
       <style
         dangerouslySetInnerHTML={{
           __html:
-            "\n        :root {\n            --primary-color: #003359;\n            --secondary-color: #F12C3E;\n        }\n        \n        body {\n            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n        }\n        \n        .bg-primary {\n            background-color: var(--primary-color);\n        }\n        \n        .bg-secondary {\n            background-color: var(--secondary-color);\n        }\n        \n        .text-primary {\n            color: var(--primary-color);\n        }\n        \n        .text-secondary {\n            color: var(--secondary-color);\n        }\n        \n        .border-primary {\n            border-color: var(--primary-color);\n        }\n        \n        .border-secondary {\n            border-color: var(--secondary-color);\n        }\n        \n        .gradient-bg {\n            background: linear-gradient(135deg, var(--primary-color) 0%, #004670 50%, var(--primary-color) 100%);\n        }\n        \n        .gradient-overlay {\n            background: linear-gradient(45deg, rgba(0, 51, 89, 0.9), rgba(241, 44, 62, 0.1));\n        }\n        \n        .hover-scale {\n            transition: transform 0.3s ease;\n        }\n        \n        .hover-scale:hover {\n            transform: scale(1.05);\n        }\n        \n        .card-shadow {\n            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n        }\n        \n        .btn-primary {\n            background-color: var(--secondary-color);\n            color: white;\n            padding: 16px 32px;\n            border-radius: 8px;\n            font-weight: 600;\n            transition: all 0.3s ease;\n            display: inline-block;\n            text-decoration: none;\n        }\n        \n        .btn-primary:hover {\n            background-color: #d91e36;\n            transform: translateY(-2px);\n            box-shadow: 0 10px 20px rgba(241, 44, 62, 0.3);\n        }\n        \n        .btn-outline {\n            border: 2px solid var(--primary-color);\n            color: var(--primary-color);\n            padding: 14px 30px;\n            border-radius: 8px;\n            font-weight: 600;\n            transition: all 0.3s ease;\n            display: inline-block;\n            text-decoration: none;\n            background: transparent;\n        }\n        \n        .btn-outline:hover {\n            background-color: var(--primary-color);\n            color: white;\n            transform: translateY(-2px);\n        }\n        \n        .section-spacing {\n            padding: 80px 0;\n        }\n        \n        .hero-pattern {\n            background-image: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='10' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3Ccircle cx='10' cy='30' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='50' cy='30' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='30' cy='50' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");\n        }\n        \n        .counter {\n            font-size: 3.5rem;\n            font-weight: 800;\n            color: var(--secondary-color);\n        }\n        \n        .bg-gradient-radial {\n            background: radial-gradient(circle, var(--tw-gradient-stops));\n        }\n    "
+            "\n        :root {\n            --primary-color: #003359;\n            --secondary-color: #F12C3E;\n        }\n        \n        body {\n            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n        }\n        \n        .bg-primary {\n            background-color: var(--primary-color);\n        }\n        \n        .bg-secondary {\n            background-color: var(--secondary-color);\n        }\n        \n        .text-primary {\n            color: var(--primary-color);\n        }\n        \n        .text-secondary {\n            color: var(--secondary-color);\n        }\n        \n        .border-primary {\n            border-color: var(--primary-color);\n        }\n        \n        .border-secondary {\n            border-color: var(--secondary-color);\n        }\n        \n        .gradient-bg {\n            background: linear-gradient(135deg, var(--primary-color) 0%, #004670 50%, var(--primary-color) 100%);\n        }\n        \n        .gradient-overlay {\n            background: linear-gradient(45deg, rgba(0, 51, 89, 0.9), rgba(241, 44, 62, 0.1));\n        }\n        \n        .hover-scale {\n            transition: transform 0.3s ease;\n        }\n        \n        .hover-scale:hover {\n            transform: scale(1.05);\n        }\n        \n        .card-shadow {\n            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);\n        }\n        \n        .btn-primary {\n            background-color: var(--secondary-color);\n            color: white;\n            padding: 16px 32px;\n            border-radius: 8px;\n            font-weight: 600;\n            transition: all 0.3s ease;\n            display: inline-block;\n            text-decoration: none;\n        }\n        \n        .btn-primary:hover {\n            background-color: #d91e36;\n            transform: translateY(-2px);\n            box-shadow: 0 10px 20px rgba(241, 44, 62, 0.3);\n        }\n        \n        .btn-outline {\n            border: 2px solid var(--primary-color);\n            color: var(--primary-color);\n            padding: 14px 30px;\n            border-radius: 8px;\n            font-weight: 600;\n            transition: all 0.3s ease;\n            display: inline-block;\n            text-decoration: none;\n            background: transparent;\n        }\n        \n        .btn-outline:hover {\n            background-color: var(--primary-color);\n            color: white;\n            transform: translateY(-2px);\n        }\n        \n        .section-spacing {\n            padding: 80px 0;\n        }\n        \n        .hero-pattern {\n            background-image: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3Ccircle cx='30' cy='10' r='2'/%3E%3Ccircle cx='50' cy='10' r='2'/%3E%3Ccircle cx='10' cy='30' r='2'/%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3Ccircle cx='50' cy='30' r='2'/%3E%3Ccircle cx='10' cy='50' r='2'/%3E%3Ccircle cx='30' cy='50' r='2'/%3E%3Ccircle cx='50' cy='50' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");\n        }\n        \n        .counter {\n            font-size: 3.5rem;\n            font-weight: 800;\n            color: var(--secondary-color);\n        }\n        \n        .bg-gradient-radial {\n            background: radial-gradient(circle, var(--tw-gradient-stops));\n        }\n        \n        /* HubSpot Form Styling */\n        #hubspot-form-container .hs-form fieldset {\n            max-width: none !important;\n        }\n        \n        #hubspot-form-container .hs-form .hs-input {\n            border: 1px solid #d1d5db !important;\n            border-radius: 8px !important;\n            padding: 12px 16px !important;\n            font-size: 16px !important;\n            transition: all 0.3s ease !important;\n        }\n        \n        #hubspot-form-container .hs-form .hs-input:focus {\n            border-color: var(--primary-color) !important;\n            box-shadow: 0 0 0 2px rgba(0, 51, 89, 0.1) !important;\n            outline: none !important;\n        }\n        \n        #hubspot-form-container .hs-form .hs-submit .hs-button {\n            background-color: var(--secondary-color) !important;\n            color: white !important;\n            padding: 16px 32px !important;\n            border-radius: 8px !important;\n            font-weight: 600 !important;\n            border: none !important;\n            font-size: 18px !important;\n            cursor: pointer !important;\n            transition: all 0.3s ease !important;\n        }\n        \n        #hubspot-form-container .hs-form .hs-submit .hs-button:hover {\n            background-color: #d91e36 !important;\n            transform: translateY(-2px) !important;\n            box-shadow: 0 10px 20px rgba(241, 44, 62, 0.3) !important;\n        }\n        \n        #hubspot-form-container .hs-form label {\n            font-weight: 600 !important;\n            color: #374151 !important;\n            margin-bottom: 8px !important;\n            font-size: 14px !important;\n        }\n        \n        #hubspot-form-container .hs-form .hs-form-field {\n            margin-bottom: 24px !important;\n        }\n    "
         }}
       />
       
@@ -1629,89 +1673,20 @@ export default function Home() {
               viewport={{ once: true }}
               className="bg-white p-8 md:p-12 rounded-2xl card-shadow"
             >
-              <form className="grid md:grid-cols-2 gap-6">
-                {[
-                  { label: "Full Name *", type: "text", placeholder: "Enter your full name", delay: 0.1 },
-                  { label: "Email Address *", type: "email", placeholder: "Enter your email", delay: 0.2 },
-                  { label: "Phone Number *", type: "tel", placeholder: "Enter your phone number", delay: 0.3 },
-                  { label: "City *", type: "select", options: ["Select your city", "Riyadh", "Jeddah", "Dammam", "Mecca", "Medina", "Other"], delay: 0.4 },
-                  { label: "Investment Budget", type: "select", options: ["Select budget range", "500K - 1M SAR", "1M - 2M SAR", "2M - 5M SAR", "5M+ SAR"], delay: 0.5 },
-                  { label: "How did you hear about us?", type: "select", options: ["Select source", "Google Search", "Social Media", "Referral", "Other"], delay: 0.6 }
-                ].map((field, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: field.delay, duration: 0.5 }}
-                    viewport={{ once: true }}
-                  >
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      {field.label}
-                    </label>
-                    {field.type === "select" ? (
-                      <motion.select 
-                        whileFocus={{ scale: 1.02 }}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                      >
-                        {field.options?.map((option, optIndex) => (
-                          <option key={optIndex}>{option}</option>
-                        ))}
-                      </motion.select>
-                    ) : (
-                      <motion.input
-                        type={field.type}
-                        whileFocus={{ scale: 1.02 }}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                        placeholder={field.placeholder}
-                      />
-                    )}
-                  </motion.div>
-                ))}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7, duration: 0.5 }}
-                  viewport={{ once: true }}
-                  className="md:col-span-2"
-                >
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <motion.textarea
-                    rows={4}
-                    whileFocus={{ scale: 1.02 }}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                    placeholder="Tell us about your interest in Wall Street English franchise..."
-                    defaultValue={""}
-                  />
-                </motion.div>
-                <motion.div 
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8, duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="md:col-span-2 text-center"
-                >
-                  <motion.button 
-                    type="submit" 
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="btn-primary text-lg px-12 py-4"
-                  >
-                    <i className="fas fa-paper-plane mr-3" />
-                    Enquire Now
-                  </motion.button>
-                  <motion.p 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 1, duration: 0.5 }}
-                    viewport={{ once: true }}
-                    className="text-sm text-gray-600 mt-4"
-                  >
-                    Our franchise team will contact you within 24 hours.
-                  </motion.p>
-                </motion.div>
-              </form>
+              {/* HubSpot Form Container */}
+              <div id="hubspot-form-container" className="w-full">
+                <div id="hubspot-form-4aed259e-276e-4be6-b623-fddfccc0df14"></div>
+              </div>
+              
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-sm text-gray-600 mt-6 text-center"
+              >
+                Our franchise team will contact you within 24 hours.
+              </motion.p>
             </motion.div>
           </div>
         </div>
@@ -1783,14 +1758,6 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-gray-300 text-lg"
               >
-                <motion.span
-                  whileHover={{ scale: 1.1 }}
-                  className="inline-block"
-                >
-                  <i className="fas fa-phone mr-3" />
-                  +966 11 123 4567
-                </motion.span>
-                <span className="mx-6">|</span>
                 <motion.span
                   whileHover={{ scale: 1.1 }}
                   className="inline-block"
@@ -1953,15 +1920,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <i className="fas fa-phone text-secondary text-sm" />
-                  <a
-                    href="tel:+966111234567"
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    +966 11 123 4567
-                  </a>
-                </div>
+
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-envelope text-secondary text-sm" />
                   <a
