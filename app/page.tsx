@@ -1,12 +1,22 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import { motion } from "framer-motion";
 
 // Declare HubSpot global type
 declare global {
   interface Window {
-    hbspt: any;
+    hbspt: {
+      forms: {
+        create: (options: {
+          portalId: string;
+          formId: string;
+          target: string;
+          region: string;
+        }) => void;
+      };
+    };
   }
 }
 import { 
@@ -532,38 +542,26 @@ const HeroSection: React.FC = () => {
 export default function Home() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  useEffect(() => {
-    // Initialize HubSpot form when component mounts
-    const initHubSpotForm = () => {
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "2550768",
-          formId: "4aed259e-276e-4be6-b623-fddfccc0df14",
-          target: "#hubspot-form-4aed259e-276e-4be6-b623-fddfccc0df14",
-          region: "na1"
-        });
-      }
-    };
-
-    // Check if HubSpot script is already loaded
+  const initHubSpotForm = () => {
     if (window.hbspt) {
-      initHubSpotForm();
-    } else {
-      // Wait for HubSpot script to load
-      const checkHubSpot = setInterval(() => {
-        if (window.hbspt) {
-          initHubSpotForm();
-          clearInterval(checkHubSpot);
-        }
-      }, 100);
-
-      // Clean up interval after 10 seconds
-      setTimeout(() => clearInterval(checkHubSpot), 10000);
+      window.hbspt.forms.create({
+        portalId: "2550768",
+        formId: "4aed259e-276e-4be6-b623-fddfccc0df14",
+        target: "#hubspot-form-4aed259e-276e-4be6-b623-fddfccc0df14",
+        region: "na1"
+      });
     }
-  }, []);
+  };
 
   return (
     <>
+      {/* HubSpot Form Script */}
+      <Script
+        src="//js.hsforms.net/forms/embed/v2.js"
+        strategy="afterInteractive"
+        onLoad={initHubSpotForm}
+      />
+      
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Wall Street English KSA - Franchise Opportunity</title>
@@ -575,13 +573,6 @@ export default function Home() {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
       />
-      
-      {/* HubSpot Form Script */}
-      <script 
-        charSet="utf-8" 
-        type="text/javascript" 
-        src="//js.hsforms.net/forms/embed/v2.js"
-      ></script>
 
       <style
         dangerouslySetInnerHTML={{
