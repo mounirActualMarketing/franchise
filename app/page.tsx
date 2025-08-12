@@ -1957,8 +1957,9 @@ export default function Home() {
                   <i className="fas fa-map-marker-alt text-secondary mt-1 text-sm" />
                   <div>
                     <p className="text-gray-300 text-sm leading-relaxed">
-                      Riyadh, Saudi Arabia<br />
-                      King Fahd Road
+                      Wall Street English KSA. Head Office<br />
+                      Al Rawdah Street, Al Khalidiyah District<br />
+                      Jeddah, Saudi Arabia
                     </p>
                   </div>
                 </div>
