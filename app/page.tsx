@@ -1863,91 +1863,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Quick Links */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
-              <ul className="space-y-3">
-                <li>
-                  <motion.a
-                    href="#opportunity"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Franchise Opportunity
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#investment"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Investment Details
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#support"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Support & Training
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#enquiry"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Apply Now
-                  </motion.a>
-                </li>
-              </ul>
-            </div>
+            {/* Quick Links (intentionally left empty) */}
+            <div className="space-y-4" />
 
-            {/* Support */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
-              <ul className="space-y-3">
-                <li>
-                  <motion.a
-                    href="#"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    FAQ
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Documentation
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Training Resources
-                  </motion.a>
-                </li>
-                <li>
-                  <motion.a
-                    href="#"
-                    whileHover={{ x: 5 }}
-                    className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
-                  >
-                    Contact Support
-                  </motion.a>
-                </li>
-              </ul>
-            </div>
+            {/* Support (intentionally left empty) */}
+            <div className="space-y-4" />
 
             {/* Contact Info */}
             <div className="space-y-4">
