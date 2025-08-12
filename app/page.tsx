@@ -1807,32 +1807,58 @@ export default function Home() {
               </p>
               <div className="flex space-x-4">
                 <motion.a
-                  href="#"
+                  href="https://www.facebook.com/wse.KSA"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
                 >
                   <i className="fab fa-facebook-f text-sm" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.tiktok.com/@wse.ksa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-tiktok text-sm" />
+                </motion.a>
+                <motion.a
+                  href="https://www.instagram.com/wseksa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-instagram text-sm" />
+                </motion.a>
+                <motion.a
+                  href="https://x.com/wseksa"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
                 >
                   <i className="fab fa-twitter text-sm" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCm6XLdFwoxZll0WP10rwp6Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
+                >
+                  <i className="fab fa-youtube text-sm" />
+                </motion.a>
+                <motion.a
+                  href="https://www.linkedin.com/company/wseksa"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
                 >
                   <i className="fab fa-linkedin-in text-sm" />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-white hover:bg-red-600 transition-colors duration-300"
-                >
-                  <i className="fab fa-instagram text-sm" />
                 </motion.a>
               </div>
             </div>
