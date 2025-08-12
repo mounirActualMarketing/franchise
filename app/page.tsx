@@ -1779,7 +1779,7 @@ export default function Home() {
                   className="inline-block"
                 >
                   <i className="fas fa-envelope mr-3" />
-                  franchise@wallstreetenglish.sa
+                  franchising@wse.edu.sa
                 </motion.span>
               </motion.div>
             </motion.div>
@@ -1966,10 +1966,10 @@ export default function Home() {
                 <div className="flex items-center space-x-3">
                   <i className="fas fa-envelope text-secondary text-sm" />
                   <a
-                    href="mailto:franchise@wallstreetenglish.sa"
+                    href="mailto:franchising@wse.edu.sa"
                     className="text-gray-300 hover:text-secondary transition-colors duration-300 text-sm"
                   >
-                    franchise@wallstreetenglish.sa
+                    franchising@wse.edu.sa
                   </a>
                 </div>
                 <div className="flex items-center space-x-3">
