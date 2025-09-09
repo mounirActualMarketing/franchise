@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import { motion } from "framer-motion";
@@ -33,7 +33,6 @@ import {
   HiDocumentText,
   HiPhone,
   HiEnvelope,
-  HiPlay,
   HiXMark,
   HiSparkles,
   HiLightBulb,
@@ -187,7 +186,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, navItems }) => (
       pointerEvents: isOpen ? "auto" : "none"
     }}
     transition={{ duration: 0.3 }}
-    className="md:hidden absolute top-full left-0 w-full bg-primary/95 backdrop-blur-sm border-t border-gray-700 shadow-lg"
+    className="md:hidden absolute top-full left-0 w-full bg-primary/60 supports-[backdrop-filter]:bg-primary/50 backdrop-blur-md border-t border-white/10 ring-1 ring-white/10 shadow-2xl"
   >
     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {navItems.map((item, index) => {
@@ -250,7 +249,7 @@ const HeaderSection: React.FC = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed w-full z-50 bg-primary/90 backdrop-blur-sm border-b border-white/10"
+      className="fixed w-full z-50 bg-primary/60 supports-[backdrop-filter]:bg-primary/50 backdrop-blur-md border-b border-white/10 ring-1 ring-white/10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -262,7 +261,7 @@ const HeaderSection: React.FC = () => {
           >
             <LogoIcon />
           </motion.div>
-          <nav className="hidden md:flex items-center space-x-1 bg-white/10 p-1 rounded-full backdrop-blur-sm">
+          <nav className="hidden md:flex items-center space-x-1 bg-white/10 supports-[backdrop-filter]:bg-white/5 p-1 rounded-full backdrop-blur-md ring-1 ring-white/10">
             {navItems.map((item, index) => (
               <motion.div
                 key={item}
@@ -555,7 +554,7 @@ export default function Home() {
               className="h-1 bg-secondary mx-auto mb-8"
             />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              In today's competitive landscape, English isn't just a skill — it's a business advantage. 
+              In today&#39;s competitive landscape, English isn&#39;t just a skill — it&#39;s a business advantage. 
               Companies across Saudi Arabia are investing in English training to:
             </p>
           </motion.div>
@@ -729,7 +728,7 @@ export default function Home() {
               {
                 stat: "1000s",
                 label: "Professionals Trained",
-                description: "across Saudi Arabia's leading companies",
+                description: "across Saudi Arabia&#39;s leading companies",
                 icon: <HiUserGroup className="text-4xl" />
               }
             ].map((result, index) => (
