@@ -909,7 +909,7 @@ export default function Home() {
           >
             <div className="bg-white p-12 rounded-2xl">
               <div className="flex justify-center mb-6">
-                <div className="text-6xl text-secondary">"</div>
+                <div className="text-6xl text-secondary">&quot;</div>
               </div>
               <p className="text-xl text-gray-700 text-center mb-8 italic leading-relaxed">
                 After partnering with Wall Street English, our frontline teams improved client communication by 40%. 
